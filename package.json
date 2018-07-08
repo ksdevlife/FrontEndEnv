@@ -1,17 +1,18 @@
 {
-  "name": "frontend_env",
+  "name": "FrontEndEnv",
   "version": "1.0.0",
   "description": "",
-  "private": true,
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack"
+    "build": "webpack",
+    "start": "electron ."
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ksdevlife/FrontEndEnv.git"
   },
-  "keywords": [],
+    "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
@@ -19,6 +20,7 @@
   },
   "homepage": "https://github.com/ksdevlife/FrontEndEnv#readme",
   "devDependencies": {
+    "electron": "^2.0.4",
     "ts-loader": "^4.4.2",
     "typescript": "^2.9.2",
     "webpack": "^4.15.1",

@@ -4,16 +4,14 @@
 $ npm install
 
 $ npm run build
-##### if on webpack.config.js, you set watch to true, when you change file then run build automatically.
+
+$ npm start
 
 ## Procedure to remember
 
-### webpack
-https://webpack.js.org/guides/getting-started/
+### basics, especially webpack.config.js
+https://qiita.com/yosshitaku067/items/ce62a81de16a9d8e2354
 
-https://webpack.js.org/
 
-### TypeScript
-https://webpack.js.org/guides/typescript/
-
-https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html
+### adjustment
+https://blog.shimar.me/2016/11/08/electron+webapck+react+sass.html
