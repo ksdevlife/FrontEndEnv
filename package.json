@@ -1,5 +1,5 @@
 {
-  "name": "FrontEndEnv",
+  "name": "frontend_env",
   "version": "1.0.0",
   "description": "",
   "private": true,
@@ -19,6 +19,8 @@
   },
   "homepage": "https://github.com/ksdevlife/FrontEndEnv#readme",
   "devDependencies": {
+    "ts-loader": "^4.4.2",
+    "typescript": "^2.9.2",
     "webpack": "^4.15.1",
     "webpack-cli": "^3.0.8"
   }
