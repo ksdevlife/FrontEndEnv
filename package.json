@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/ksdevlife/FrontEndEnv/issues"
   },
-  "homepage": "https://github.com/ksdevlife/FrontEndEnv#readme"
+  "homepage": "https://github.com/ksdevlife/FrontEndEnv#readme",
+  "devDependencies": {
+    "webpack": "^4.15.1",
+    "webpack-cli": "^3.0.8"
+  }
 }
