@@ -1,4 +1,5 @@
 import bar from './bar';
+import createCollection from "./functional.ts";
 
 bar();
 
@@ -20,3 +21,5 @@ document.write(greeter(person));
 // var b = "34";
 // b = a;
 // alert(a);
+
+console.log(createCollection(3, (x:any) => x * 3));
