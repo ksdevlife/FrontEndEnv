@@ -31,5 +31,9 @@
     "typescript": "^2.9.2",
     "webpack": "^4.15.1",
     "webpack-cli": "^3.0.8"
+  },
+  "dependencies": {
+    "@types/jquery": "^3.3.4",
+    "jquery": "^3.3.1"
   }
 }

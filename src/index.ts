@@ -1,4 +1,5 @@
 import bar from './bar';
+import usejQuery from './usejQuery.ts';
 
 bar();
 
@@ -15,6 +16,8 @@ let person = {firstName: "Jane", lastName: "User"};
 
 document.write("<br />");
 document.write(greeter(person));
+
+usejQuery();
 
 // var a = 12;
 // var b = "34";
