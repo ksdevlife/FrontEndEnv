@@ -4,43 +4,7 @@
     <meta charset="UTF-8">
 
     <title>HTML Tags Reference</title>
-    <style>
-        td,
-        .th {
-            border: 1px solid rgb(190, 190, 190);
-            padding: 10px;
-        }
-
-        td {
-            text-align: center;
-        }
-
-        tr:nth-child(even) {
-            background-color: #eee;
-        }
-
-        th[scope="col"] {
-            background-color: #696969;
-            color: #fff;
-        }
-
-        th[scope="row"] {
-            background-color: #d7d9f2;
-        }
-
-        #caption {
-            padding: 10px;
-            caption-side: bottom;
-        }
-
-        #table {
-            border-collapse: collapse;
-            border: 2px solid rgb(200, 200, 200);
-            letter-spacing: 1px;
-            font-family: sans-serif;
-            font-size: .8rem;
-        }
-    </style>    
+    <link rel="stylesheet" href="tagref.css">
 </head>
 <body>
 
@@ -50,6 +14,7 @@
     <a href="https://www.google.com/" id="anchor">a</a>
     <strong id="strong">strong</strong> <!-- <b></b>  -->
     <em id="emphasis">em</em> <!-- <i></i> -->
+    <strike>strike</strike>
     <img src="" alt="img">
     <input type="text" name="text" id="text" placeholder="input (type=text)" >
     <label for="" id="label">label</label>
@@ -65,9 +30,14 @@
     2<sup>3</sup>=
     <script>document.write(`${2*2*2}`)</script>
     <br />
+
     <textarea name="textarea" id="textarea" cols="30" rows="10">textarea</textarea>
-    
+    <!-- inline ? -->
+    <iframe src="https://ja.wikipedia.org"></iframe>
+    <span>Is iframe inline element?</span>
     <hr>
+
+
     <!-- block level elements -->
     <h2>block level elements tags</h2>    
     <h1 id="h1">heading1</h1>
@@ -88,6 +58,28 @@
         <li>element 2</li>
         <li>element 3</li>
     </ul>
+
+    <form style="border: 1px solid">
+        <p>this is form. you can set attribute method to get or post</p>
+        <input type="text" name="text" id="text" placeholder="text">
+        <br />
+        <select name="select" id="select">
+            <option value="one">1</option>
+            <option value="two">2</option>
+            <option value="three">3</option>
+        </select>
+        <br />  
+        <label for="radio1">radio1</label>
+        <input type="radio" name="radio" id="radio1">
+        <label for="radio2">radio2</label>
+        <input type="radio" name="radio" id="radio2"> 
+        <br />
+        <label for="checkbox">checkbox</label>
+        <input type="checkbox" name="checkbox" id="checkbox">
+        <br />
+        <input type="submit" value="send">       
+    </form>
+    
     <output id="output">output</output>
     <table>
         <thead>
@@ -131,6 +123,10 @@
         </tr>
     </table>
     <hr>
-    
+
+    <!-- https://www.w3schools.com/html/html_entities.asp -->
+    <!-- https://dev.w3.org/html5/html-author/charref -->
+    <p>Entities</p>
+    <p>&lt;&quot;&copy;&quot;&gt;</p>
 </body>
 </html>
