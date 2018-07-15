@@ -5,11 +5,39 @@ module.exports = {
     watch: true,
     entry: './src/index.ts',
     module: {
-        rules: [
-            {
+        rules: [{
                 test: /\.tsx?$/,
                 use: 'ts-loader',
                 exclude: /node_modules/
+            },
+            {
+                test: /\.css$/,
+                use: [
+                    require.resolve('style-loader'),
+                    {
+                        loader: require.resolve('css-loader'),
+                        options: {
+                            importLoaders: 1,
+                        },
+                    }
+
+                ],
+            },
+            {
+                test: /\.scss/,
+                use: [
+                    'style-loader',
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            url: false,
+                            importLoaders: 2
+                        },
+                    },
+                    {
+                        loader: 'sass-loader',
+                    }
+                ]
             }
         ]
     },

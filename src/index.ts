@@ -1,4 +1,6 @@
 import bar from './bar';
+import './style.css';
+import './style.scss';
 
 bar();
 
