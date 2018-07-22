@@ -13,9 +13,9 @@ module.exports = {
             {
                 test: /\.css$/,
                 use: [
-                    require.resolve('style-loader'),
+                    'style-loader',
                     {
-                        loader: require.resolve('css-loader'),
+                        loader: 'css-loader',
                         options: {
                             importLoaders: 1,
                         },
@@ -30,7 +30,6 @@ module.exports = {
                     {
                         loader: 'css-loader',
                         options: {
-                            url: false,
                             importLoaders: 2
                         },
                     },
