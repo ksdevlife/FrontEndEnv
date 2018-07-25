@@ -4,6 +4,15 @@ module.exports = {
     mode: 'production',
     watch: true,
     entry: './src/index.ts',
+    output: {
+        path: path.resolve(__dirname, 'dist'),
+        filename: 'bundle.js'
+    },
+    devServer: {
+        contentBase: path.join(__dirname, './'),
+        compress: true,
+        port: 9000,
+    },
     module: {
         rules: [{
                 test: /\.tsx?$/,
@@ -43,8 +52,4 @@ module.exports = {
     resolve: {
         extensions: ['.tsx', '.ts', '.js']
     },
-    output: {
-        path: path.resolve(__dirname, 'dist'),
-        filename: 'bundle.js'
-    }
 };
