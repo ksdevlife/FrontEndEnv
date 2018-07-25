@@ -1,4 +1,6 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+// const webpack = require('webpack'); // cause error
 
 module.exports = {
     mode: 'production',
@@ -9,7 +11,7 @@ module.exports = {
         filename: 'bundle.js'
     },
     devServer: {
-        contentBase: path.join(__dirname, './'),
+        contentBase: path.join(__dirname, 'dist'),
         compress: true,
         port: 9000,
     },
@@ -49,6 +51,11 @@ module.exports = {
             }
         ]
     },
+    plugins: [
+        new HtmlWebpackPlugin({
+            title: 'Output Management'
+        })
+    ],
     resolve: {
         extensions: ['.tsx', '.ts', '.js']
     },
