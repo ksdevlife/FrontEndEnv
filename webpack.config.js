@@ -11,8 +11,6 @@ module.exports = {
         filename: 'bundle.js'
     },
     devServer: {
-        contentBase: path.join(__dirname, 'dist'),
-        compress: true,
         port: 9000,
     },
     module: {
@@ -53,7 +51,8 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'Output Management'
+            title: 'Output Management',
+            template: 'index.html'
         })
     ],
     resolve: {
