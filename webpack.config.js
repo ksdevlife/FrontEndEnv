@@ -10,7 +10,7 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js'
     },
-    devServer: {
+    devServer: { // need to exec "npm run start:dev" on independent git-bash
         port: 9000,
     },
     module: {
