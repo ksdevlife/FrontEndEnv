@@ -3,16 +3,14 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 // const webpack = require('webpack'); // cause error
 
 module.exports = {
-    mode: 'production',
+    mode: 'development',
     watch: true,
     entry: './src/index.ts',
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js'
     },
-    devServer: {
-        contentBase: path.join(__dirname, 'dist'),
-        compress: true,
+    devServer: { // need to exec command on imdependent git-bash
         port: 9000,
     },
     module: {
@@ -53,7 +51,8 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'Output Management'
+            title: 'Output Management',
+            template: 'index.html'
         })
     ],
     resolve: {

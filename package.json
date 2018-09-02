@@ -23,23 +23,29 @@
   },
   "homepage": "https://github.com/ksdevlife/FrontEndEnv#readme",
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.3.1",
     "@types/mocha": "^5.2.4",
     "@types/node": "^10.5.2",
     "css-loader": "^1.0.0",
     "espower-typescript": "^9.0.0",
     "html-webpack-plugin": "^3.2.0",
+    "hyperscript": "^2.0.2",
+    "hyperscript-helpers": "^3.0.3",
     "mocha": "^5.2.0",
     "node-sass": "^4.9.2",
     "power-assert": "^1.6.0",
     "sass-loader": "^7.0.3",
     "style-loader": "^0.21.0",
+    "tachyons": "^4.10.0",
     "ts-loader": "^4.4.2",
     "typescript": "^2.9.2",
+    "virtual-dom": "^2.1.1",
     "webpack": "^4.15.1",
     "webpack-cli": "^3.0.8",
     "webpack-dev-server": "^3.1.5"
   },
   "dependencies": {
+    "ramda": "^0.25.0",
     "tslint": "^5.11.0"
   }
 }
