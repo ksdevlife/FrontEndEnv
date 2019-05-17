@@ -1,61 +1,31 @@
 const path = require('path');
+
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-// const webpack = require('webpack'); // cause error
 
 module.exports = {
-    mode: 'production',
+  mode: 'development',
     watch: true,
-    entry: './src/index.ts',
+  entry: './src/main.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js'
     },
-    devServer: { // need to exec "npm run start:dev" on independent git-bash
-        port: 9000,
+  devServer: {
+    port: 8080
     },
     module: {
-        rules: [{
-                test: /\.tsx?$/,
-                use: 'ts-loader',
-                exclude: /node_modules/
-            },
-            {
-                test: /\.css$/,
-                use: [
-                    'style-loader',
+      rules: [
                     {
-                        loader: 'css-loader',
-                        options: {
-                            importLoaders: 1,
-                        },
-                    }
-
-                ],
-            },
-            {
-                test: /\.scss/,
-                use: [
-                    'style-loader',
-                    {
-                        loader: 'css-loader',
-                        options: {
-                            importLoaders: 2
-                        },
-                    },
-                    {
-                        loader: 'sass-loader',
-                    }
-                ]
+              test: /\.vue/,
+              loader: 'vue-loader'
             }
         ]
     },
     plugins: [
+    new VueLoaderPlugin(),
         new HtmlWebpackPlugin({
-            title: 'Output Management',
-            template: 'index.html'
+        template: './public/index.html'
         })
-    ],
-    resolve: {
-        extensions: ['.tsx', '.ts', '.js']
-    },
+  ]
 };
